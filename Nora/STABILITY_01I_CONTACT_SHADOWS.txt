@@ -1,0 +1,12 @@
+01I CONTACT SHADOW SYSTEM
+Base: 01H (known working on iPad/Xogot).
+
+Changed only shadow rendering/building:
+- Generic shadows no longer derive from full sprite width.
+- ItemBuilder scans a shallow band of bottom opaque pixels and creates separate contact lobes for actual artwork contact regions (legs/base).
+- Shadow renderer draws three low-alpha static layers per lobe for soft contact edges; no realtime Light2D, shader, timers, or per-frame shadow work.
+- Existing scene-authored sofa shadow reduced to a subtle contact strip.
+- No touch, drag, placement, surface, save, GameMode, or resource-loading logic changed.
+
+Mobile intent: static CanvasItem drawing, redrawn only when configured; avoids realtime 2D light/shadow cost.
+- Old sofa now has two small contact shadows under its actual bottom contact/leg regions instead of one broad oval.

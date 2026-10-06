@@ -1,0 +1,7 @@
+01L — shadow proportion tuning
+Base: user-tested 01K.
+Only visual shadow dimensions changed.
+Generic furniture auto shadow: wider and slightly taller.
+Generic decor auto shadow: wider and slightly taller.
+Legacy sofa shadow: 430x24 -> 610x34.
+No touch, placement, scale, save, GameMode, Surface, or resource-loading logic changed.

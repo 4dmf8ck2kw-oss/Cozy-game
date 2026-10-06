@@ -1,0 +1,14 @@
+01J contact-shadow fix, based directly on the user's tested 01I project.
+
+Observed on device: shadows were effectively invisible.
+Root causes addressed:
+- 01I shadow opacity was only 0.10 and then split into translucent layers, too weak on the room floor.
+- contact detection inspected only the lowest ~5.5% of artwork, so perspective furniture could miss feet that end slightly higher than the lowest foot.
+
+Changes:
+- contact strength raised to 0.22 while keeping soft layered edges;
+- detector now scans bottom 14% and records each column's lowest opaque pixel;
+- separate feet remain separate lobes; tiny antialias gaps are merged;
+- each lobe keeps its own vertical contact position instead of forcing every foot to one baseline;
+- old sofa's two authored foot shadows raised to 0.20 and 54x7;
+- no changes to touch, movement, Surface, scale, GameMode, saving, catalog loading, or other gameplay systems.

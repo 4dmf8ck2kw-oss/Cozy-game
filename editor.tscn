@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://dvsrr3ydk2q7w"]
+
+[ext_resource type="Script" uid="uid://cconq6jb68sfe" path="res://editor.gd" id="1_vjobr"]
+[ext_resource type="PackedScene" uid="uid://butw4po18ffc" path="res://character.tscn" id="1_wlowb"]
+[ext_resource type="Script" uid="uid://fn6f7uycdxjv" path="res://location_button.gd" id="3_wrb8p"]
+
+[node name="Editor" type="Node2D" unique_id=706755066]
+script = ExtResource("1_vjobr")
+palette_pos = Vector2(1000, 700)
+circle_size = 70.0
+lashes_pos = Vector2(1000, 800)
+
+[node name="Bg" type="ColorRect" parent="." unique_id=767759886]
+custom_minimum_size = Vector2(2400, 1800)
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 2200.0
+offset_bottom = 1600.0
+color = Color(0.93711406, 1.0000001, 0.9371363, 1)
+
+[node name="Character" parent="." unique_id=160453736 instance=ExtResource("1_wlowb")]
+position = Vector2(366.00003, 475)
+scale = Vector2(1.2, 1.2)
+
+[node name="TestPanel" type="VBoxContainer" parent="." unique_id=1579635124]
+custom_minimum_size = Vector2(500, 300)
+offset_left = 1090.0
+offset_top = 123.0
+offset_right = 1590.0
+offset_bottom = 423.0
+
+[node name="ColorBtn" type="ColorPickerButton" parent="TestPanel" unique_id=1850679155]
+layout_mode = 2
+text = "ColorPickerButton"
+
+[node name="ShineSlider" type="HSlider" parent="TestPanel" unique_id=1242662167]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+min_value = 0.2
+max_value = 0.6
+step = 0.01
+value = 0.5
+
+[node name="SatSlider" type="HSlider" parent="TestPanel" unique_id=86785904]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+min_value = 0.6
+max_value = 1.0
+step = 0.01
+value = 0.7
+
+[node name="BackBtn" type="Button" parent="." unique_id=69801695]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 38.0
+offset_top = 41.0
+offset_right = 138.0
+offset_bottom = 141.0
+text = "Выход"
+script = ExtResource("3_wrb8p")
+target_scene = "res://world.tscn"
+
+[node name="LayerBar" type="HBoxContainer" parent="." unique_id=589585701]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 1086.0
+offset_top = 370.0
+offset_right = 1786.0
+offset_bottom = 470.0
+
+[node name="LenBtn" type="Button" parent="LayerBar" unique_id=383087461]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Длинна"
+
+[node name="ExtraBtn" type="Button" parent="LayerBar" unique_id=1366857059]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Допы"
+
+[node name="MidBtn" type="Button" parent="LayerBar" unique_id=1458561851]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Середина"
+
+[node name="FrontBtn" type="Button" parent="LayerBar" unique_id=388194614]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Перед"
+
+[node name="VariantGrid" type="GridContainer" parent="." unique_id=557047168]
+offset_left = 1083.0
+offset_top = 505.0
+offset_right = 1783.0
+offset_bottom = 1055.0
+columns = 3
+
+[node name="Tabs" type="HBoxContainer" parent="." unique_id=1173380081]
+offset_left = 716.0
+offset_top = 952.0
+offset_right = 1896.0
+offset_bottom = 1052.0

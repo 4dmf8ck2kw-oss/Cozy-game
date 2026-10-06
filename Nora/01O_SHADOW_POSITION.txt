@@ -1,0 +1,1 @@
+01O: Kept the approved 01N shadow sizes/shapes unchanged. Moved stylized blob shadows upward by 45% of their own height so they fill the space under furniture instead of hanging below the feet. Sofa manual shadow moved from y=249 to y=193 (same 610x125 size). No touch/surface/save/scale systems changed.

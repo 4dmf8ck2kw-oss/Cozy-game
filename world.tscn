@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bqy11dshkicvm"]
+
+[ext_resource type="Script" uid="uid://fn6f7uycdxjv" path="res://location_button.gd" id="1_f3sb7"]
+
+[node name="Node2D" type="Node2D" unique_id=654615330]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=977925740]
+offset_left = 1572.0
+offset_top = 775.0
+offset_right = 1811.0
+offset_bottom = 912.0
+color = Color(1.0000001, 0.04042301, 0.040420588, 1)
+
+[node name="LocationButton" type="Button" parent="ColorRect" unique_id=1322574875]
+layout_mode = 0
+offset_right = 239.0
+offset_bottom = 136.0
+script = ExtResource("1_f3sb7")
+
+[node name="EditotBtn" type="Button" parent="." unique_id=1604600312]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 1680.0
+offset_top = 34.0
+offset_right = 1880.0
+offset_bottom = 234.0
+text = "Редактор"
+script = ExtResource("1_f3sb7")
+target_scene = "res://editor.tscn"

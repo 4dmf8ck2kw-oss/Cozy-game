@@ -1,0 +1,11 @@
+01N — taller stylized blob shadows
+
+Base: tested 01M.
+User visual target: substantially taller/deeper shadow mass, slightly narrower than 01M.
+Changes only shadow proportions:
+- generic furniture width factor 1.32 -> 1.16
+- generic furniture height factor 0.115 -> 0.30, with taller clamps
+- decor width factor 1.22 -> 1.10
+- decor height factor 0.19 -> 0.34
+- legacy sofa shadow 690x52 -> 610x125
+No touch/surface/save/scale/game-mode changes.

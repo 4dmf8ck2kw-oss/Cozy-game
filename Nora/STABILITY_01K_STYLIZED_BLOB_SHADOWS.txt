@@ -1,0 +1,10 @@
+01K shadow redesign
+- Based on user's tested 01J project.
+- Removed per-foot/contact-segment shadow rendering.
+- Shadows are again one stylized soft blob under each object.
+- Supports ELLIPSE and ROUNDED_RECT shapes.
+- Generic furniture defaults to a rounded rectangle when wide; compact decor defaults to ellipse.
+- Round table and table lamp explicitly use ellipse.
+- Sofa now uses one rounded-rectangle blob instead of two tiny foot shadows.
+- Shadow center is placed 2 px below the visible bottom of generic items, eliminating the old floating gap.
+- Touch, placement, scaling, Surface, save and GameMode code were not changed.

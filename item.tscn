@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://oid50nmknubw"]
+
+[ext_resource type="Script" uid="uid://duh6s7ifowo74" path="res://draggable.gd" id="1_tnite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnite"]
+size = Vector2(1000, 60)
+
+[node name="Item" type="Area2D" unique_id=500589160]
+script = ExtResource("1_tnite")
+moves_in_life = false
+fall_only_in_life_mode = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1096768364]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=826014855]
+
+[node name="FootPoint" type="Node2D" parent="." unique_id=911900013]
+
+[node name="PlacementZone" type="Area2D" parent="." unique_id=1572643825 groups=["placement_zone"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementZone" unique_id=2059285065]
+position = Vector2(4.0000906, -15.999998)
+shape = SubResource("RectangleShape2D_tnite")

@@ -1,0 +1,16 @@
+STABILITY PASS 01 — centralized touch resolver
+
+Changed:
+- Added TouchResolver autoload. It is now the single owner of deciding which draggable Area2D receives a touch.
+- Removed per-object input_event drag-start race from draggable.gd.
+- draggable.gd now exposes can_start_drag() + begin_drag(screen_pos); movement/drop behavior is otherwise kept intact.
+- When several draggable objects overlap, portable decor/characters are preferred over furniture; then visual z/order breaks ties deterministically.
+
+What to test on device:
+1. Put pillow/decor over sofa/table and grab the decor repeatedly from overlapping areas.
+2. Overlap two furniture pieces in Build mode and check that the visually top intended one is selected consistently.
+3. Drag character where it overlaps furniture.
+4. Confirm ordinary empty-space horizontal camera drag still works.
+5. Confirm release/drop, falling, seating and saving still behave as before.
+
+This pass intentionally does NOT change depth sorting, Surface/RestY, footprints, bounds, spring startup or save hierarchy. Those are later stability passes so regressions stay attributable.

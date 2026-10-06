@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ql4esyvoumev"]
+
+[ext_resource type="Script" uid="uid://cvo7jjwbwsoyt" path="res://item_data.gd" id="1_pvnnx"]
+[ext_resource type="Texture2D" uid="uid://bbsmph58x7akp" path="res://furniture/Image_99.png" id="2_ro26g"]
+
+[resource]
+script = ExtResource("1_pvnnx")
+texture = ExtResource("2_ro26g")
+sprite_scale = 0.8
+can_hold = true
+shadow_shape = 1
+hold_pos = Vector2(0, 0.32)
+hold_size = Vector2(0.92, 0.34)
+hold_rest = 0.5
+metadata/_custom_type_script = "uid://cvo7jjwbwsoyt"

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ct3levqqc7jdm"]
+
+[ext_resource type="Script" uid="uid://4y1leb10y4xo" path="res://room_look.gd" id="1_eq6nc"]
+[ext_resource type="Shader" uid="uid://ca6ktc0kl6k62" path="res://shaders/pattern_color.gdshader" id="1_splo0"]
+[ext_resource type="Texture2D" uid="uid://d2gjhjggl61j5" path="res://pattern/Image_812.png" id="1_xehqc"]
+[ext_resource type="Texture2D" uid="uid://nt0jcsavsnf6" path="res://Image_894.png" id="2_i7s6n"]
+[ext_resource type="Script" uid="uid://caa2ni7d0or3m" path="res://camera.gd" id="3_xehqc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eq6nc"]
+shader = ExtResource("1_splo0")
+shader_parameter/color_dark = Color(0.72, 0.55, 0.38, 1)
+shader_parameter/color_mid = Color(0.93, 0.84, 0.66, 1)
+shader_parameter/color_light = Color(1, 0.96, 0.86, 1)
+shader_parameter/mid_point = 0.4
+
+[node name="Background" type="Node2D" unique_id=1250201128]
+position = Vector2(-13028, 6781)
+script = ExtResource("1_eq6nc")
+
+[node name="Wall" type="Sprite2D" parent="." unique_id=1489072087]
+modulate = Color(0.99999994, 1.0000001, 1.0000001, 1)
+texture_repeat = 2
+material = SubResource("ShaderMaterial_eq6nc")
+position = Vector2(2245, 334)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xehqc")
+region_enabled = true
+region_rect = Rect2(0, 0, 9176, 2304)
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=1485769905]
+position = Vector2(2223, 1090)
+scale = Vector2(1007.325, 151.75)
+texture = ExtResource("2_i7s6n")
+
+[node name="FloorSeam" type="Line2D" parent="Floor" unique_id=1187766765 groups=["floor_seam"]]
+position = Vector2(0.38234708, -2.4950576)
+points = PackedVector2Array(-1000, 0, 1000, 0)
+width = 0.02
+default_color = Color(0.9630794, 0.07503221, -2.8606975e-09, 1)
+
+[node name="Baseboard" type="ColorRect" parent="." unique_id=618729228]
+modulate = Color(0.99999994, 0.96545357, 0.90405566, 1)
+self_modulate = Color(0.99999994, 0.8661059, 0.85355544, 1)
+custom_minimum_size = Vector2(4600, 40)
+offset_left = -50.0
+offset_top = 700.0
+offset_right = 4550.0
+offset_bottom = 740.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1045408215]
+position = Vector2(1083, 637)
+script = ExtResource("3_xehqc")

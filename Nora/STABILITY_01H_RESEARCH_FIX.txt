@@ -1,0 +1,10 @@
+STABILITY 01H — research fix
+
+Built from the last user-confirmed working 01D project.
+1. Removed .godot editor/import cache from distributed ZIP. Godot on iPad must rebuild it; this prevents stale parser/editor state from previous archives.
+2. Generic catalog buttons use ResourceLoader.CACHE_MODE_IGNORE when reading ItemData, so saved Inspector changes to sprite_scale are read fresh instead of reusing the already cached .tres resource.
+3. SaveManager uses the same fresh ItemData load when recreating catalog items.
+4. ItemBuilder scaling model itself is left as in working 01D (sprite scaled; generated geometry calculated at same scale), avoiding the risky root-scale rewrite from failed 01E/01F/01G.
+5. Generic shadow formula changed only in ItemBuilder: broad, shallow contact ellipse, y at visible bottom.
+6. Existing scene-authored sofa shadow changed from 560x80 at y=180 to 390x28 at y=238.
+7. Lamp test scale is 0.55.

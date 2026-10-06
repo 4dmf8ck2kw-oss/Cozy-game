@@ -1,0 +1,634 @@
+[gd_scene format=3 uid="uid://butw4po18ffc"]
+
+[ext_resource type="Script" uid="uid://dx8gt0k334nh8" path="res://appearance.gd" id="1_jx0ln"]
+[ext_resource type="Texture2D" uid="uid://dvlm8hovgy8d" path="res://hair/back hair/Image_456.png" id="2_x1sy7"]
+[ext_resource type="Script" uid="uid://p5cyf5r34t2l" path="res://limb_swing.gd" id="4_lpiy1"]
+[ext_resource type="Texture2D" uid="uid://dij3mrr8vqo0y" path="res://character/Image_308.png" id="5_pm3tn"]
+[ext_resource type="Texture2D" uid="uid://c1v5ng20oxv2u" path="res://character/Image_433.png" id="6_xvb2f"]
+[ext_resource type="Texture2D" uid="uid://b0wgtwmll8ia6" path="res://character/Image_146.png" id="7_uswop"]
+[ext_resource type="Texture2D" uid="uid://4vd3tslregrj" path="res://character/Image_246.png" id="8_5said"]
+[ext_resource type="Shader" uid="uid://by4tvlvw4n3s6" path="res://shaders/hair_color.gdshader" id="8_bwfjh"]
+[ext_resource type="Texture2D" uid="uid://bjqfhxb7vnj85" path="res://character/Image_990.png" id="9_go3uk"]
+[ext_resource type="Texture2D" uid="uid://4wsunrvolq51" path="res://face/head/01/fill.png" id="9_jb3kq"]
+[ext_resource type="Texture2D" uid="uid://bg3n5td2jmwpd" path="res://hair/extra hair/Image_185.png" id="9_x1sy7"]
+[ext_resource type="Texture2D" uid="uid://kceni57xe0v8" path="res://character/Image_95.png" id="10_lyohd"]
+[ext_resource type="Script" uid="uid://bl3m708ykbyec" path="res://braid_swing.gd" id="10_sm1rv"]
+[ext_resource type="Texture2D" uid="uid://bu44hlklmwqtf" path="res://character/Image_775.png" id="11_2ia7u"]
+[ext_resource type="Texture2D" uid="uid://blqwds1v3y3hg" path="res://hair/middle hair/Image_664.png" id="12_sm1rv"]
+[ext_resource type="Texture2D" uid="uid://d123286evo8ba" path="res://hair/front hair/Image_126.png" id="13_jx0ln"]
+[ext_resource type="Texture2D" uid="uid://0t5k1wonb74j" path="res://character/Image_182.png" id="14_0fer6"]
+[ext_resource type="Texture2D" uid="uid://bucfwqwv4asop" path="res://face/eyes/white.png" id="16_kjduu"]
+[ext_resource type="Texture2D" uid="uid://d20obq12f8m0a" path="res://face/blush/Image_955.png" id="16_pm3tn"]
+[ext_resource type="Texture2D" uid="uid://ddace2nm1jlk8" path="res://face/eyes/iris.png" id="17_3d8aq"]
+[ext_resource type="Texture2D" uid="uid://c44mab6000ha2" path="res://face/head/01/line.png" id="17_xvb2f"]
+[ext_resource type="Texture2D" uid="uid://wreh6330l56j" path="res://face/eyes/glint.png" id="18_8i6g0"]
+[ext_resource type="Texture2D" uid="uid://dtk5wdyy7polq" path="res://face/eyelids/Image_373.png" id="18_pm3tn"]
+[ext_resource type="Script" uid="uid://2pf3gctoafjq" path="res://eye_look.gd" id="18_r5wlx"]
+[ext_resource type="Texture2D" uid="uid://gparxooib2cd" path="res://face/eyes/01/line.png" id="19_8i6g0"]
+[ext_resource type="Texture2D" uid="uid://cm7iqqt4inx8y" path="res://face/eyes/01/lashes.png" id="20_r5wlx"]
+[ext_resource type="Texture2D" uid="uid://b0qr4bu3a2v7x" path="res://face/nose/Image_654.png" id="25_xvb2f"]
+[ext_resource type="Texture2D" uid="uid://b2edi8h5q1hol" path="res://face/brows/Image_454.png" id="27_lyohd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_88tkl"]
+resource_local_to_scene = true
+shader = ExtResource("8_bwfjh")
+shader_parameter/hair_color = Color(0.95686275, 0.64313745, 0.7529412, 1)
+shader_parameter/light_boost = 0.6
+shader_parameter/shine = 0.5000000237500001
+shader_parameter/saturation = 0.70000003325
+shader_parameter/sway = 0.0
+shader_parameter/sway_start = 0.3
+shader_parameter/sway_strength = 0.03
+shader_parameter/sway_end = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lpiy1"]
+resource_local_to_scene = true
+shader = ExtResource("8_bwfjh")
+shader_parameter/hair_color = Color(0.95686275, 0.64313745, 0.7529412, 1)
+shader_parameter/light_boost = 0.6
+shader_parameter/shine = 0.5000000237500001
+shader_parameter/saturation = 0.70000003325
+shader_parameter/sway = 0.0
+shader_parameter/sway_start = 0.3
+shader_parameter/sway_strength = 0.03
+shader_parameter/sway_end = 0.6
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5said"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y0ipg"]
+resource_local_to_scene = true
+shader = ExtResource("8_bwfjh")
+shader_parameter/hair_color = Color(0.95686275, 0.64313745, 0.7529412, 1)
+shader_parameter/light_boost = 0.6
+shader_parameter/shine = 0.5000000237500001
+shader_parameter/saturation = 0.70000003325
+shader_parameter/sway = 0.0
+shader_parameter/sway_start = 0.15
+shader_parameter/sway_strength = 0.3
+shader_parameter/sway_end = 0.6000000285
+
+[sub_resource type="Animation" id="Animation_jb3kq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torso/ThighL:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(178, 32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torso/ThighL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torso/ThighL/ShinFootL:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106, 5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Torso/ThighL/ShinFootL:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Torso/ThighR:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(178, -32)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Torso/ThighR:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Torso/ThighR/ShinFootR:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106, -5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Torso/ThighR/ShinFootR:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_c1b4b"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torso/ThighL:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(170, 25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torso/ThighL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.61086524]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torso/ThighL/ShinFootL:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(108, 6)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Torso/ThighL/ShinFootL:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0005609806),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.7853981633974483]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Torso/ThighR:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(170, -25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Torso/ThighR:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.61086524]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Torso/ThighR/ShinFootR:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(108, -6)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Torso/ThighR/ShinFootR:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853981633974483]
+}
+
+[sub_resource type="Animation" id="Animation_7tnxx"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torso/ThighL:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(178, 32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torso/ThighL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torso/ThighL/ShinFootL:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106, 5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Torso/ThighL/ShinFootL:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Torso/ThighR:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(178, -32)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Torso/ThighR:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Torso/ThighR/ShinFootR:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106, -5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Torso/ThighR/ShinFootR:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bwfjh"]
+_data = {
+&"RESET": SubResource("Animation_jb3kq"),
+&"sit": SubResource("Animation_c1b4b"),
+&"stand": SubResource("Animation_7tnxx")
+}
+
+[node name="Node2D" type="Skeleton2D" unique_id=160453736]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_jx0ln")
+nose_mid = 0.3
+nose_line = 0.001
+nose_tint = 0.8
+lips_mid = 0.2
+iris_shine = 0.7
+skin_mid = 0.35
+skin_line_point = 0.2
+skin_line_darken = 0.6
+
+[node name="Torso" type="Bone2D" parent="." unique_id=1908581980]
+rotation = 1.5706078
+rest = Transform2D(0.00018854538, 1, -1, 0.00018854538, 0, 0)
+auto_calculate_length_and_angle = false
+length = 150.0
+bone_angle = 0.0
+
+[node name="HairBack" type="Sprite2D" parent="Torso" unique_id=991652997]
+material = SubResource("ShaderMaterial_88tkl")
+position = Vector2(65, 0.0079189055)
+rotation = -1.5707964
+texture = ExtResource("2_x1sy7")
+
+[node name="UpperArmL" type="Bone2D" parent="Torso" unique_id=1172474624]
+position = Vector2(6, 22)
+rest = Transform2D(1, 0, 0, 1, 6, 22)
+auto_calculate_length_and_angle = false
+length = 70.0
+bone_angle = 24.999996
+script = ExtResource("4_lpiy1")
+stiffness = 60.0
+max_angle = 20.0
+
+[node name="UpperArmLSprite" type="Sprite2D" parent="Torso/UpperArmL" unique_id=842624398 groups=["skin"]]
+position = Vector2(60, -23)
+rotation = -1.5707964
+texture = ExtResource("5_pm3tn")
+
+[node name="LowerArmL" type="Bone2D" parent="Torso/UpperArmL" unique_id=1921436179]
+position = Vector2(83, 38)
+rest = Transform2D(1, 0, 0, 1, 83, 38)
+auto_calculate_length_and_angle = false
+length = 80.0
+bone_angle = 24.999996
+
+[node name="LowerArmLSprite" type="Sprite2D" parent="Torso/UpperArmL/LowerArmL" unique_id=2018986691 groups=["skin"]]
+position = Vector2(-23, -61)
+rotation = -1.5707964
+texture = ExtResource("6_xvb2f")
+
+[node name="HandLSprite" type="Sprite2D" parent="Torso/UpperArmL/LowerArmL" unique_id=739322249 groups=["skin"]]
+position = Vector2(-22.999819, -60.98756)
+rotation = -1.5707964
+texture = ExtResource("7_uswop")
+
+[node name="UpperArmR" type="Bone2D" parent="Torso" unique_id=1609084347]
+position = Vector2(6.004148, -21.998867)
+rest = Transform2D(1, 0, 0, 1, 6.004148, -21.998867)
+auto_calculate_length_and_angle = false
+length = 80.0
+bone_angle = 24.999996
+script = ExtResource("4_lpiy1")
+stiffness = 60.0
+max_angle = 20.0
+
+[node name="UpperArmRSprite" type="Sprite2D" parent="Torso/UpperArmR" unique_id=35736576 groups=["skin"]]
+position = Vector2(60, 23)
+rotation = -1.5707964
+texture = ExtResource("5_pm3tn")
+flip_h = true
+
+[node name="LowerArmR" type="Bone2D" parent="Torso/UpperArmR" unique_id=340575605]
+position = Vector2(83, -38)
+rest = Transform2D(1, 0, 0, 1, 83, -38)
+auto_calculate_length_and_angle = false
+length = 80.0
+bone_angle = -24.999996
+
+[node name="LowerArmRSprite" type="Sprite2D" parent="Torso/UpperArmR/LowerArmR" unique_id=473529171 groups=["skin"]]
+position = Vector2(-23.000185, 61.01244)
+rotation = -1.5707964
+texture = ExtResource("6_xvb2f")
+flip_h = true
+
+[node name="HandRSprite" type="Sprite2D" parent="Torso/UpperArmR/LowerArmR" unique_id=669574775 groups=["skin"]]
+position = Vector2(-23, 61)
+rotation = -1.5707964
+texture = ExtResource("7_uswop")
+flip_h = true
+
+[node name="ThighL" type="Bone2D" parent="Torso" unique_id=672839126]
+position = Vector2(178, 32)
+rest = Transform2D(1, 0, 0, 1, 178, 32)
+auto_calculate_length_and_angle = false
+length = 120.109
+bone_angle = 3.4999995
+script = ExtResource("4_lpiy1")
+
+[node name="ThighLSprite" type="Sprite2D" parent="Torso/ThighL" unique_id=2060955454 groups=["skin"]]
+position = Vector2(-110, -33)
+rotation = -1.5707964
+texture = ExtResource("8_5said")
+
+[node name="ShinFootL" type="Bone2D" parent="Torso/ThighL" unique_id=594721423]
+position = Vector2(106, 5)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(1, 0, 0, 1, 106, 5)
+auto_calculate_length_and_angle = false
+length = 85.0
+bone_angle = 1.5
+
+[node name="ShinFootLSprite" type="Sprite2D" parent="Torso/ThighL/ShinFootL" unique_id=802119562 groups=["skin"]]
+position = Vector2(-214, -35.5)
+rotation = -1.579523
+texture = ExtResource("9_go3uk")
+
+[node name="ThighR" type="Bone2D" parent="Torso" unique_id=788593644]
+position = Vector2(178, -32)
+rest = Transform2D(1, 0, 0, 1, 178, -32)
+auto_calculate_length_and_angle = false
+length = 120.0
+bone_angle = 3.4999995
+script = ExtResource("4_lpiy1")
+
+[node name="ThighRSprite" type="Sprite2D" parent="Torso/ThighR" unique_id=1134415008 groups=["skin"]]
+position = Vector2(-110, 33)
+rotation = -1.5707964
+texture = ExtResource("8_5said")
+flip_h = true
+
+[node name="ShinFootR" type="Bone2D" parent="Torso/ThighR" unique_id=1792959083]
+position = Vector2(106, -5)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(1, 0, 0, 1, 106, -5)
+auto_calculate_length_and_angle = false
+length = 85.0
+bone_angle = 1.5
+
+[node name="ShinFootRSprite" type="Sprite2D" parent="Torso/ThighR/ShinFootR" unique_id=1420841451 groups=["skin"]]
+position = Vector2(-214, 35.5)
+rotation = -1.5620697
+texture = ExtResource("9_go3uk")
+flip_h = true
+
+[node name="TorsoSprite" type="Sprite2D" parent="Torso" unique_id=1497893364 groups=["skin"]]
+position = Vector2(68, 0.012821086)
+rotation = -1.5706078
+texture = ExtResource("10_lyohd")
+
+[node name="NeckSprite" type="Sprite2D" parent="Torso" unique_id=226049292 groups=["skin"]]
+position = Vector2(70, 0.013198176)
+rotation = -1.5707964
+texture = ExtResource("11_2ia7u")
+
+[node name="Head" type="Bone2D" parent="Torso" unique_id=1764055321]
+position = Vector2(-22, -0.0041479985)
+rest = Transform2D(1, 0, 0, 1, -23, 0)
+auto_calculate_length_and_angle = false
+length = 100.0
+bone_angle = 180.0
+
+[node name="BraidPivot" type="Node2D" parent="Torso/Head" unique_id=1706928974]
+position = Vector2(-40, -0.0075418153)
+script = ExtResource("10_sm1rv")
+damping = 15.0
+inertia = 0.006
+max_angle = 20.0
+rotate_amount = 0.4
+
+[node name="HairExtra" type="Sprite2D" parent="Torso/Head/BraidPivot" unique_id=562558232]
+material = SubResource("ShaderMaterial_lpiy1")
+position = Vector2(128, 0.024133809)
+rotation = -1.5707964
+texture = ExtResource("9_x1sy7")
+
+[node name="EarsSprite" type="Sprite2D" parent="Torso/Head" unique_id=239307958 groups=["skin"]]
+position = Vector2(90, 0.012632541)
+rotation = -1.5707964
+texture = ExtResource("14_0fer6")
+
+[node name="HeadSprite" type="Sprite2D" parent="Torso/Head" unique_id=1031224249 groups=["skin"]]
+clip_children = 2
+position = Vector2(90, 0)
+rotation = -1.5707964
+texture = ExtResource("9_jb3kq")
+
+[node name="Blush" type="Sprite2D" parent="Torso/Head/HeadSprite" unique_id=794364040]
+texture = ExtResource("16_pm3tn")
+
+[node name="HeadLine" type="Sprite2D" parent="Torso/Head" unique_id=2133630838 groups=["skin"]]
+position = Vector2(89.5, 0)
+rotation = -1.5707964
+texture = ExtResource("17_xvb2f")
+
+[node name="Face" type="Node2D" parent="Torso/Head" unique_id=730730349]
+
+[node name="EyeLids" type="Sprite2D" parent="Torso/Head/Face" unique_id=496263367 groups=["skin"]]
+position = Vector2(90, -4.656613e-10)
+rotation = -1.5707964
+texture = ExtResource("18_pm3tn")
+
+[node name="EyeWhite" type="Sprite2D" parent="Torso/Head/Face" unique_id=1706646174]
+clip_children = 2
+position = Vector2(90, 0)
+rotation = -1.5706078
+texture = ExtResource("16_kjduu")
+
+[node name="EyeIris" type="Sprite2D" parent="Torso/Head/Face/EyeWhite" unique_id=208656051]
+texture = ExtResource("17_3d8aq")
+script = ExtResource("18_r5wlx")
+glance_time = 0.5
+min_wait = 4.0
+max_wait = 10.0
+
+[node name="EyeGlint" type="Sprite2D" parent="Torso/Head/Face/EyeWhite/EyeIris" unique_id=2118504714]
+texture = ExtResource("18_8i6g0")
+
+[node name="EyeLine" type="Sprite2D" parent="Torso/Head/Face" unique_id=2129722214]
+position = Vector2(90, 0)
+rotation = -1.5707964
+texture = ExtResource("19_8i6g0")
+
+[node name="EyeLashes" type="Sprite2D" parent="Torso/Head/Face" unique_id=751977989]
+position = Vector2(90, 0)
+rotation = -1.5707964
+texture = ExtResource("20_r5wlx")
+
+[node name="Nose" type="Sprite2D" parent="Torso/Head/Face" unique_id=1169349323]
+position = Vector2(90, 0)
+rotation = -1.5707964
+texture = ExtResource("25_xvb2f")
+
+[node name="Lips" type="Sprite2D" parent="Torso/Head/Face" unique_id=144311162]
+position = Vector2(90, 0)
+rotation = -1.5707964
+texture = SubResource("CompressedTexture2D_5said")
+
+[node name="Brows" type="Sprite2D" parent="Torso/Head/Face" unique_id=1242487567]
+position = Vector2(90, 0)
+rotation = -1.5707964
+texture = ExtResource("27_lyohd")
+
+[node name="HairMid" type="Sprite2D" parent="Torso/Head" unique_id=967719543]
+material = SubResource("ShaderMaterial_88tkl")
+position = Vector2(87, 0)
+rotation = -1.5706078
+texture = ExtResource("12_sm1rv")
+
+[node name="HairFront" type="Sprite2D" parent="Torso/Head" unique_id=33047088]
+material = SubResource("ShaderMaterial_y0ipg")
+position = Vector2(88, 0.016591994)
+rotation = -1.5707964
+texture = ExtResource("13_jx0ln")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Torso/Head" unique_id=580939564]
+position = Vector2(87, 0.012066904)
+rotation = -1.5707964
+remote_path = NodePath("../../HairBack")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=146278538]
+libraries/ = SubResource("AnimationLibrary_bwfjh")

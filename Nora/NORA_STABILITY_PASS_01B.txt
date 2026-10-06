@@ -1,0 +1,4 @@
+STABILITY PASS 01B
+- Fixed regression: TouchResolver now receives initial screen touches in _input instead of _unhandled_input; the previous version could miss all world touches after another handler consumed them.
+- Lamp scale corrected from 0.30 to 0.40. Source lamp art is ~2x authored scale, so 0.40 corresponds to the project's ~0.80 furniture scale convention.
+- No other systems changed.

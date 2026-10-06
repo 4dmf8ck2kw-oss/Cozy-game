@@ -1,0 +1,9 @@
+01M — shadow visual weight only
+Base: tested 01L.
+Changed only shadow presentation:
+- soft layers now 100% / 92% / 82% instead of 100% / 82% / 62%, so the visible shadow no longer collapses into a narrow dark stripe;
+- outer layer is slightly more visible;
+- generic furniture blob: 1.32x visible width, height ~11.5% of width;
+- decor blob: 1.22x visible width, slightly taller;
+- legacy sofa blob: 690x52.
+No touch, placement, surface, scale, save, GameMode or resource-loading logic changed.

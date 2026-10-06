@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://item_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://furniture/lamp_table_01.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+title = "Настольная лампа"
+texture = ExtResource("2")
+sprite_scale = 0.55
+kind = 1
+can_sit = false
+can_hold = false
+has_shadow = true
+shadow_shape = 1
+metadata/_custom_type_script = "res://item_data.gd"

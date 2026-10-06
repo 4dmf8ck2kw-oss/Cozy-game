@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://dyn82850wijok"]
+
+[ext_resource type="PackedScene" uid="uid://ct3levqqc7jdm" path="res://background.tscn" id="2_rj586"]
+[ext_resource type="Script" uid="uid://0u5pk0dnror1" path="res://GameMode.gd" id="3_epypp"]
+[ext_resource type="Script" uid="uid://b667m0r8e8uou" path="res://button.gd" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://d2ddeebdg05kq" path="res://furniture/Image_167.png" id="4_hqns4"]
+[ext_resource type="Script" uid="uid://duh6s7ifowo74" path="res://draggable.gd" id="4_ir8iy"]
+[ext_resource type="Script" uid="uid://dwefx2gspn2e" path="res://exit_button.gd" id="6_4d7sh"]
+[ext_resource type="Script" uid="uid://c0oc44yw30pyf" path="res://reset_button.gd" id="7_ir8iy"]
+[ext_resource type="Script" uid="uid://b83unds27e31k" path="res://room_panel.gd" id="8_hqns4"]
+[ext_resource type="Texture2D" uid="uid://4kbreyc4js4d" path="res://furniture/Image_946.png" id="8_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://b0jijspmypqgh" path="res://Image_75.png" id="9_4d7sh"]
+[ext_resource type="Script" uid="uid://d24ogu6kr6778" path="res://table.gd" id="9_x0ka3"]
+[ext_resource type="Script" uid="uid://baiesdflgeiii" path="res://trash.gd" id="10_0h7mo"]
+[ext_resource type="PackedScene" uid="uid://butw4po18ffc" path="res://character.tscn" id="10_hqns4"]
+[ext_resource type="Script" uid="uid://du25f70jywvpp" path="res://shadow.gd" id="12_nr8wp"]
+[ext_resource type="Script" path="res://lamp.gd" id="13_lamp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
+radius = 52.782127
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
+size = Vector2(700.0006, 451.11133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
+size = Vector2(533.3335, 50.9028)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir8iy"]
+size = Vector2(145.29411, 369.4118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqns4"]
+size = Vector2(1000, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d7sh"]
+size = Vector2(1000, 60)
+
+[node name="Node2D" type="Node2D" unique_id=295658970]
+script = ExtResource("3_epypp")
+
+[node name="Background" parent="." unique_id=1250201128 instance=ExtResource("2_rj586")]
+position = Vector2(27, -86)
+
+[node name="Decor1" type="Area2D" parent="." unique_id=757690340]
+position = Vector2(1257, 540)
+scale = Vector2(0.9, 0.9)
+script = ExtResource("4_ir8iy")
+falls = true
+needs_placement = true
+checks_overlap = true
+rests_on_furniture = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decor1" unique_id=142022485]
+shape = SubResource("CircleShape2D_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Decor1" unique_id=1404852896]
+position = Vector2(2, -1.5)
+texture = ExtResource("4_hqns4")
+
+[node name="FootPoint" type="Node2D" parent="Decor1" unique_id=1638221946]
+position = Vector2(-4.5, 42.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1932244883]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=346972746]
+offset_left = 1754.0
+offset_top = 12.0
+offset_right = 1879.0
+offset_bottom = 43.0
+text = "Режим: жизнь"
+script = ExtResource("4_0hol4")
+
+[node name="ExitButton" type="Button" parent="CanvasLayer" unique_id=1272028158]
+offset_left = 41.0
+offset_top = 28.0
+offset_right = 180.0
+offset_bottom = 118.0
+text = "Выход"
+script = ExtResource("6_4d7sh")
+
+[node name="ResetButton" type="Button" parent="CanvasLayer" unique_id=467782681]
+offset_left = 204.0
+offset_top = 28.0
+offset_right = 343.0
+offset_bottom = 122.0
+text = "Сброс"
+script = ExtResource("7_ir8iy")
+
+[node name="RoomPanel" type="VBoxContainer" parent="CanvasLayer" unique_id=96698275]
+offset_left = 1300.0
+offset_top = 150.0
+offset_right = 1860.0
+offset_bottom = 350.0
+script = ExtResource("8_hqns4")
+
+[node name="PatternList" type="GridContainer" parent="CanvasLayer/RoomPanel" unique_id=315888302]
+layout_mode = 2
+columns = 6
+
+[node name="WallColors" type="GridContainer" parent="CanvasLayer/RoomPanel" unique_id=1737576533]
+layout_mode = 2
+columns = 6
+
+[node name="PatternColors" type="GridContainer" parent="CanvasLayer/RoomPanel" unique_id=58820872]
+layout_mode = 2
+columns = 6
+
+[node name="FloorColors" type="GridContainer" parent="CanvasLayer/RoomPanel" unique_id=1075548321]
+layout_mode = 2
+columns = 6
+
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=1190208261]
+offset_left = 1717.0
+offset_top = 74.0
+offset_right = 1863.0
+offset_bottom = 178.0
+text = "Стол"
+script = ExtResource("9_x0ka3")
+
+[node name="LampButton" type="Button" parent="CanvasLayer"]
+offset_left = 1717.0
+offset_top = 190.0
+offset_right = 1863.0
+offset_bottom = 294.0
+text = "Лампа"
+script = ExtResource("13_lamp")
+
+[node name="Trash" type="Button" parent="CanvasLayer" unique_id=296303933]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -126.0
+offset_right = 192.0
+grow_vertical = 0
+button_mask = 0
+text = "Мусорка"
+script = ExtResource("10_0h7mo")
+
+[node name="Furniture1" type="Area2D" parent="." unique_id=452138110 groups=["needs_floor"]]
+position = Vector2(591, 655.00006)
+scale = Vector2(0.9, 0.9)
+script = ExtResource("4_ir8iy")
+moves_in_life = false
+fall_only_in_life_mode = false
+needs_placement = true
+checks_overlap = true
+uses_zone_placement = true
+rest_zone_min_y = 550.0
+rest_zone_max_y = 950.0
+max_characters = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Furniture1" unique_id=1930946214]
+position = Vector2(0, -6.781684e-05)
+texture = ExtResource("8_x0ka3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture1" unique_id=1176964858]
+position = Vector2(-3.333374, 3.333252)
+scale = Vector2(0.99999917, 0.99999917)
+shape = SubResource("RectangleShape2D_q6r6c")
+
+[node name="SeatZone" type="Area2D" parent="Furniture1" unique_id=1887719700 groups=["placement_zone"]]
+position = Vector2(0, -3.814697e-05)
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture1/SeatZone" unique_id=233068134]
+position = Vector2(-2.222168, -16.562439)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_rj586")
+
+[node name="FloorEdge" type="Node2D" parent="Furniture1" unique_id=727996694]
+position = Vector2(12.222221, 246.66667)
+
+[node name="Shadow" type="Node2D" parent="Furniture1"]
+position = Vector2(0, 193)
+script = ExtResource("12_nr8wp")
+shadow_size = Vector2(610, 125)
+color = Color(0.12, 0.1, 0.09, 0.18)
+shape = 1
+
+[node name="Character1" type="Area2D" parent="." unique_id=788276964]
+position = Vector2(1596.9999, 667.00024)
+scale = Vector2(1.7, 1.7)
+script = ExtResource("4_ir8iy")
+moves_in_build = false
+falls = true
+checks_overlap = true
+rests_on_furniture = true
+is_character = true
+seat_margin = 60.0
+hide_in_build_mode = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character1" unique_id=147920056]
+position = Vector2(-0.8822632, -5.882416)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_ir8iy")
+
+[node name="FootPoint" type="Node2D" parent="Character1" unique_id=7476819]
+position = Vector2(1.7647772, 158.23514)
+
+[node name="FloorEdge" type="Node2D" parent="Character1" unique_id=1940797884]
+position = Vector2(1.1765424, 176.47044)
+
+[node name="Node2D" parent="Character1" unique_id=160453736 instance=ExtResource("10_hqns4")]
+position = Vector2(0.58833075, -57.05896)
+scale = Vector2(0.55, 0.55)
+
+[node name="SitPoint" type="Node2D" parent="Character1" unique_id=1744483566]
+position = Vector2(1.7647775, 42.3528)
+
+[node name="Shelf1" type="Area2D" parent="." unique_id=1771502791]
+position = Vector2(1175, 307)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_ir8iy")
+moves_in_life = false
+fall_only_in_life_mode = false
+needs_placement = true
+checks_overlap = true
+uses_zone_placement = true
+rest_zone_min_y = 112.0
+rest_zone_max_y = 630.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Shelf1" unique_id=934380586]
+position = Vector2(-6, 41)
+texture = ExtResource("9_4d7sh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelf1" unique_id=936343908]
+position = Vector2(-4.5139995, 17.87803)
+shape = SubResource("RectangleShape2D_hqns4")
+
+[node name="PlacementZone" type="Area2D" parent="Shelf1" unique_id=1496674178 groups=["placement_zone"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelf1/PlacementZone" unique_id=1050983570]
+position = Vector2(4.0000906, -15.999998)
+shape = SubResource("RectangleShape2D_4d7sh")
